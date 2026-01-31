@@ -1,0 +1,37 @@
+
+:root {
+  --bg-colour: #f4ebd9;
+  --text-colour: #0c090d;
+  --accent-colour: #7bb2d9;
+}
+
+body {
+  font-family: "Funnel Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  display: block;
+  flex: 1;
+  margin: auto;
+  padding: 2rem;
+}
+
+#tyd {
+  font-size: clamp(4rem, 10vmin, 12rem);
+}
