@@ -23,7 +23,7 @@ function kryTyd() {
         return 'half ' + getalle[ure%12 || 12];
     }
     
-    return getalle[minute] + ` ${ (minute > 30) ? 'v' : '' }oor ` + getalle[ure%12 || 12];
+    return getalle[ minute % 30 ] + ` ${ (minute > 30) ? 'v' : '' }oor ` + getalle[ure%12 || 12];
 }
 
 function tydEvalueeringsFunksie() {
@@ -31,6 +31,6 @@ function tydEvalueeringsFunksie() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    setInterval(tydEvalueeringsFunksie());
+    setInterval(tydEvalueeringsFunksie()i, 1000);
     tydEvalueeringsFunksie();
 });
