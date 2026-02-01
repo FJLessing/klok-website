@@ -10,7 +10,7 @@ const getalle = {
 function kryTyd() {
     const nou = new Date();
     const ure = nou.getHours();
-    const minute = Math.floor(nou.getMinutes() / 5) * 5;
+    const minute = Math.floor( nou.getMinutes() / 5 ) * 5;
 
     let volgendeUur = (ure%12) + 1;
     volgendeUur = (volgendeUur > 12) ? 1 : volgendeUur;
@@ -22,8 +22,13 @@ function kryTyd() {
     } else if (minute === 30) {
         return 'half ' + getalle[ure%12 || 12];
     }
-    
-    return getalle[ minute % 30 ] + ` ${ (minute > 30) ? 'v' : '' }oor ` + getalle[ure%12 || 12];
+
+    let minuteIndeks = minute;
+    if (minuteIndeks > 30) {
+        minuteIndeks = 30 - (minuteIndeks % 30);
+    }
+
+    return getalle[ minuteIndeks ] + ` ${ (minute > 30) ? 'v' : '' }oor ` + getalle[ure%12 || 12];
 }
 
 function tydEvalueeringsFunksie() {
