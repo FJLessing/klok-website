@@ -36,6 +36,6 @@ function tydEvalueeringsFunksie() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    setInterval(tydEvalueeringsFunksie(), 1000);
+    window.timeEvaluationInterval = setInterval(tydEvalueeringsFunksie, 1000);
     tydEvalueeringsFunksie();
 });
